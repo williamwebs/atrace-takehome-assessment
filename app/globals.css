@@ -1,21 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #eeeeee;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --white: #ffffff;
+  --dark: #000000;
+  --text-grey: #9197b3;
+  --blue: #5932ea;  
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Afacad Flux", serif;
+}
+
+input,
+select {
+  border: 1px solid black;
+  padding: 2px 10px;
+  margin: 5px;
+  display: block;
+  width: 300px;
+  height: 40px;
 }

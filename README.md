@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Take-Home Assessment: Dashboard Application - aTrace
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project implements a responsive dashboard application for managing and visualizing product data. The key features include summary boxes, a data table with paginated product listings, and forms for creating and editing products. The application is built using TypeScript, [Next.js](https://nextjs.org), TailwindCSS, and Zustand, with all data stored in local storage for simplicity.
+
+## Table of Contents
+
+1. Setup Instructions
+2. Implementation Approach
+3. Assumptions
+4. Features
+5. Usage
+6. Deliverables
+7. Contributing
+
+## Setup Instructions
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v16 or later)
+- npm / pnpm or yarn
+- A code editor like VS Code
+
+## Cloning the Repository
+
+To get the project running on your PC:
+First, clone the repository and install the dependencies using:
+
+```bash
+git clone (repository URL)
+
+# to install the dependencies
+pnpm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
 # or
-pnpm dev
+pnpm run dev
 # or
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+No external API integration is required, so environment variables are not needed.
 
-## Learn More
+## Implementation approach
 
-To learn more about Next.js, take a look at the following resources:
+### Summary
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project is structured into modular components and pages to ensure scalability and maintainability. TailwindCSS provides a modern styling approach, while Zustand efficiently manages the application state.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Features Implemented
+
+1. Dashboard Page:
+
+- Summary boxes to display total products and their statuses.
+- A paginated data table for products with CRUD capabilities.
+
+2. Form for Add/Edit Products:
+
+- A reusable form component with fields for product details and packages.
+
+3. Pagination:
+
+- A simple paginated approach to handle product data, with a default page size of 5.
+
+4. Local Storage for Data:
+
+- Dummy data is created and manipulated locally using the provided schema and GraphQL-style queries/mutations.
+
+### Assumptions
+
+1. Local Storage: All product data is stored and managed locally without external API calls.
+2. Pagination: A fixed page size of 5 is used for simplicity, and all pagination logic is handled on the client side.
+3. Responsiveness: The app is designed to work seamlessly across mobile, tablet, and desktop devices.
+4. Time Format: ETA is displayed in `dd/MM/yyyy hh:mm aaa` format and converted to/from Unix time as needed.
+
+### Features
+
+#### Dashboard
+
+1. Summary Boxes:
+
+- Total products (`countProducts` query).
+- Status-wise product count (`productsByStatus` query).
+
+2. Paginated Table:
+
+- Displays product details: `ID, Title, Description, Status, and ETA`.
+
+3. CRUD Operations:
+
+- Create and update products using reusable forms.
+- Delete products for extra functionality.
+- Add/Edit Form fields with validation.
+
+4. Pagination
+
+- A simple `"Next"` and `"Previous"` button implementation.
+- Keeps track of the current page in state.
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Next.js application was deployed to use the [Vercel Platform](https://vercel.com) and the Live Demo can be access [here]()

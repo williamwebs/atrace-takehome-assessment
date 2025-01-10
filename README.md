@@ -10,9 +10,7 @@ This project implements a responsive dashboard application for managing and visu
 2. Implementation Approach
 3. Assumptions
 4. Features
-5. Usage
-6. Deliverables
-7. Contributing
+5. Deployment
 
 ## Setup Instructions
 
@@ -59,6 +57,47 @@ No external API integration is required, so environment variables are not needed
 ### Summary
 
 The project is structured into modular components and pages to ensure scalability and maintainability. TailwindCSS provides a modern styling approach, while Zustand efficiently manages the application state.
+
+### Project structure
+Directory structure:
+└── williamwebs-atrace-takehome-assessment/
+    ├── README.md
+    ├── eslint.config.mjs
+    ├── next.config.ts
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── postcss.config.mjs
+    ├── tailwind.config.ts
+    ├── tsconfig.json
+    ├── app/
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    ├── components/
+    │   ├── card/
+    │   │   ├── ProductList.tsx
+    │   │   └── Summary.tsx
+    │   ├── form/
+    │   │   └── AddProduct.tsx
+    │   ├── input/
+    │   │   └── InputField.tsx
+    │   ├── modal/
+    │   │   └── Modal.tsx
+    │   ├── nav/
+    │   │   └── SideBar.tsx
+    │   ├── pagination/
+    │   │   └── Pagination.tsx
+    │   └── table/
+    │       └── Table.tsx
+    ├── constants/
+    │   └── constants.js
+    ├── public/
+    │   └── images/
+    ├── store/
+    │   └── products.ts
+    └── types/
+        └── types.d.ts
+
 
 ### Features Implemented
 

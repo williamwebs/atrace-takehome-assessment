@@ -83,11 +83,9 @@ const Table = ({ productList, deleteProduct }: Props) => {
         </tbody>
       </table>
 
-      <Modal
-        openModal={openModal}
-        setOpenModal={setOpenModal}
-        children={<AddProduct product={selectedProduct} />}
-      />
+      <Modal openModal={openModal} setOpenModal={setOpenModal}>
+        <AddProduct product={selectedProduct} />
+      </Modal>
     </>
   );
 };

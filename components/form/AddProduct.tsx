@@ -37,7 +37,7 @@ const AddProduct = ({ product }: ProductForm) => {
   // handle input change fn
   const handleChange = (
     field: keyof Product | { packageIndex: number; field: keyof Package },
-    value: any
+    value: string | number
   ) => {
     setFormData((prev) => {
       // Handle cases for regular fields like "title", etc

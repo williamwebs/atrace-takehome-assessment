@@ -120,11 +120,9 @@ export default function Home() {
           </div>
           {/*  */}
         </section>
-        <Modal
-          openModal={openModal}
-          setOpenModal={setOpenModal}
-          children={<AddProduct />}
-        />
+        <Modal openModal={openModal} setOpenModal={setOpenModal}>
+          <AddProduct />
+        </Modal>
       </main>
     </>
   );

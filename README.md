@@ -112,4 +112,4 @@ The project is structured into modular components and pages to ensure scalabilit
 
 ## Deploy on Vercel
 
-The Next.js application was deployed to use the [Vercel Platform](https://vercel.com) and the Live Demo can be access [here]()
+The Next.js application was deployed to use the [Vercel Platform](https://vercel.com) and the Live Demo can be access [here](https://atrace-takehome-assessment.vercel.app/)
